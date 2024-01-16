@@ -4,8 +4,8 @@ const morgan = require("morgan");
 const app = express();
 const projects = require("./data/projects.json");
 const articles = require("./data/articles.json");
+app.use(express.static(path.join(__dirname, "public")));
 
-app.use(express.static("public"));
 app.use(express.json());
 app.use(morgan("dev"));
 
