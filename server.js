@@ -21,5 +21,8 @@ app.get("/api/projects", (req, res) => {
 app.get("/api/articles", (req, res) => {
   res.json(articles);
 });
+app.get("*", (req, res) => {
+  res.sendStatus(404);
+});
 
 app.listen(3000, () => console.log("Listening on server 3000!"));
